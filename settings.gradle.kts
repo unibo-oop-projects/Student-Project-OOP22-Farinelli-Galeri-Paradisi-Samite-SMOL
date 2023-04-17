@@ -7,4 +7,17 @@
  * in the user manual at https://docs.gradle.org/5.5.1/userguide/multi_project_builds.html
  */
 
+ plugins {
+    id("com.gradle.enterprise") version "3.13"
+}
+
+gradleEnterprise {
+    buildScan {
+        termsOfServiceUrl = "https://gradle.com/terms-of-service"
+        termsOfServiceAgree = "yes"
+        publishAlways()
+    }
+}
+
+
 rootProject.name = "OOP22-SMOL"
